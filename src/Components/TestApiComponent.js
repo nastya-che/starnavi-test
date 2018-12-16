@@ -12,7 +12,7 @@ class TestApiComponent extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://demo4452328.mockable.io/templates')
+        axios.get('https://demo4452328.mockable.io/templates')
             .then(res => {
                 const itemsArr = res.data;
                 this.setState({

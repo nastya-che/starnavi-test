@@ -13,7 +13,7 @@ class LiveApiComponent extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://demo4452328.mockable.io/properties')
+        axios.get('https://demo4452328.mockable.io/properties')
             .then(res => {
                 const itemsArr = res.data;
                 this.setState({
