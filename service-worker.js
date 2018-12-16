@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/starnavi-test/precache-manifest.9dc8577a4cc5efb1a3ea858c6286df41.js"
+  "/starnavi-test/precache-manifest.8781818b7516fa81dbede8cfd90241c9.js"
 );
 
 workbox.clientsClaim();
