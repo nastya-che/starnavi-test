@@ -1,0 +1,149 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic,cyrillic-ext,latin-ext');
+
+/* VARIABLES */
+
+$darkGray: #565a69;
+$darkBlue: #3f51b5;
+$red: #DC143C;
+
+/* MIXINS */
+
+/* COMMON STYLES */
+
+body{
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+}
+
+h2{
+  font-weight: 400;
+  text-align: center;
+  padding: 50px;
+  margin: 0px;
+  color: $darkGray;
+  background: rgba(155,155,155,0.2);
+}
+
+
+section{
+  justify-content: center;
+  margin: 70px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+}
+
+
+/* MAP ITEM STYLES */
+
+
+.map-item{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 7px -2px;
+}
+
+.map-item-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+.image-element{
+  margin: 10px 0px;
+  padding: 15px;
+  display: flex;
+  flex: 1 220px;
+}
+
+.item-element{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  overflow: hidden;
+  height: 20px;
+  span{
+    display: flex;
+    margin-left: 5px;
+  }
+}
+
+.address-element{
+  color: #565a69;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  max-height: 40px;
+  span{
+    align-items: center;
+  }
+}
+
+.price-element{
+  color: $red;
+  font-size: 20px;
+}
+
+.area-element, .rating-element{
+  color: $darkBlue;
+  font-size: 16px;
+}
+
+.desc-element{
+  margin: 5px;
+  font-size: 13px;
+  height: 50px;
+  align-items: flex-start;
+  span{
+    height: 100%;
+    text-overflow: ellipsis;
+  }
+
+}
+
+@media(max-width: 1400px){
+  section{
+    grid-template-columns: repeat(2, 400px);
+  }
+}
+
+@media(max-width: 960px){
+  section{
+    grid-template-columns: repeat(1, 400px);
+  }
+}
+
+
+@media(max-width: 510px){
+  section{
+    grid-template-columns: repeat(1, 80%);
+  }
+  .map-item{
+    min-width: 300px;
+  }
+  .image-element{
+    flex: 1 150px;
+  }
+  .address-element{
+    font-size: 14px;
+    height: 34px;
+    span{
+      display: flex;
+      align-items: flex-start;
+      align-self: flex-start;
+    }
+
+  }
+}
+
+@media(max-width: 400px){
+  section{
+    grid-template-columns: repeat(1, 90%);
+  }
+}
